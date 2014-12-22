@@ -1,4 +1,4 @@
-package sActiveInfo;
+ï»¿package sActiveInfo;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -22,7 +22,7 @@ import jdbc.StuDb;
 
 /**
  * 
- * Ñ§ÉúĞÅÏ¢±í
+ * å­¦ç”Ÿä¿¡æ¯è¡¨
  * 
  */
 
@@ -31,7 +31,7 @@ public class ActInfo extends JFrame {
 	Container contentPane;
 	JPanel Panel = new JPanel();
 
-	// ¿ò¼ÜµÄ´óĞ¡
+	// æ¡†æ¶çš„å¤§å°
 	Dimension faceSize = new Dimension(800, 500);
 
 	JLabel jLabel1 = new JLabel();
@@ -54,9 +54,9 @@ public class ActInfo extends JFrame {
 	JTextField details = new JTextField(15);
 	
 
-	JButton j1 = new JButton("È·¶¨");
-	JButton j2 = new JButton("ÍË³ö");
-	JButton j3 = new JButton("Çå¿Õ");
+	JButton j1 = new JButton("ç¡®å®š");
+	JButton j2 = new JButton("é€€å‡º");
+	JButton j3 = new JButton("æ¸…ç©º");
 
 	GridBagLayout girdBag = new GridBagLayout();
 	GridBagConstraints girdBagCon;
@@ -67,10 +67,10 @@ public class ActInfo extends JFrame {
 	Insets insets;
 
 	public ActInfo() {
-		// ÉèÖÃ¿ò¼ÜµÄ´óĞ¡
+		// è®¾ç½®æ¡†æ¶çš„å¤§å°
 		this.setSize(faceSize);
-		// ÉèÖÃ±êÌâ
-		this.setTitle("Ñ§ÉúÆ½Ê±ĞÅÏ¢¹ÜÀí");
+		// è®¾ç½®æ ‡é¢˜
+		this.setTitle("å­¦ç”Ÿå¹³æ—¶ä¿¡æ¯ç®¡ç†");
 		setLocation(256, 128);
 		this.setResizable(false);
 		this.setVisible(true);
@@ -85,10 +85,10 @@ public class ActInfo extends JFrame {
 		contentPane = this.getContentPane();
 		contentPane.setLayout(new BorderLayout());
 
-		// ÖĞ²¿Ãæ°åµÄ²¼¾Ö
+		// ä¸­éƒ¨é¢æ¿çš„å¸ƒå±€
 		Panel.setLayout(girdBag);
 
-		jLabel1.setText("Ñ§	ºÅ£º");
+		jLabel1.setText("å­¦	å·ï¼š");
 		jLabel1.setFont(new Font("Dialog", 0, 12));
 		gridx = 0;
 		gridy = 0;
@@ -108,7 +108,7 @@ public class ActInfo extends JFrame {
 		girdBag.setConstraints(sNum, girdBagCon);
 		Panel.add(sNum);
 
-		jLabel2.setText("ĞÕ	Ãû£º");
+		jLabel2.setText("å§“	åï¼š");
 		jLabel2.setFont(new Font("Dialog", 0, 12));
 		gridx = 2;
 		gridy = 0;
@@ -128,7 +128,7 @@ public class ActInfo extends JFrame {
 		girdBag.setConstraints(sName, girdBagCon);
 		Panel.add(sName);
 
-		jLabel3.setText("ÈÕÆÚ£º");
+		jLabel3.setText("æ—¥æœŸï¼š");
 		jLabel3.setFont(new Font("Dialog", 0, 12));
 		gridx = 0;
 		gridy = 1;
@@ -148,7 +148,7 @@ public class ActInfo extends JFrame {
 		girdBag.setConstraints(date, girdBagCon);
 		Panel.add(date);
 
-		jLabel4.setText("ĞÔ	±ğ£º");
+		jLabel4.setText("æ€§	åˆ«ï¼š");
 		jLabel4.setFont(new Font("Dialog", 0, 12));
 		gridx = 2;
 		gridy = 1;
@@ -168,7 +168,7 @@ public class ActInfo extends JFrame {
 		girdBag.setConstraints(sSex, girdBagCon);
 		Panel.add(sSex);
 
-		jLabel5.setText("²Î¼Ó»áÒéÇé¿ö£º");
+		jLabel5.setText("å‚åŠ ä¼šè®®æƒ…å†µï¼š");
 		jLabel5.setFont(new Font("Dialog", 0, 12));
 		gridx = 0;
 		gridy = 2;
@@ -188,7 +188,7 @@ public class ActInfo extends JFrame {
 		girdBag.setConstraints(meeting, girdBagCon);
 		Panel.add(meeting);
 
-		jLabel6.setText("³ö²ÙÇé¿ö£º");
+		jLabel6.setText("å‡ºæ“æƒ…å†µï¼š");
 		jLabel6.setFont(new Font("Dialog", 0, 12));
 		gridx = 2;
 		gridy = 2;
@@ -210,7 +210,7 @@ public class ActInfo extends JFrame {
 
 		
 
-		jLabel7.setText("²Î¼Ó»î¶¯Çé¿ö£º");
+		jLabel7.setText("å‚åŠ æ´»åŠ¨æƒ…å†µï¼š");
 		jLabel7.setFont(new Font("Dialog", 0, 12));
 		gridx = 0;
 		gridy = 3;
@@ -230,7 +230,7 @@ public class ActInfo extends JFrame {
 		girdBag.setConstraints(activity, girdBagCon);
 		Panel.add(activity);
 
-		jLabel8.setText("±¸×¢£º");
+		jLabel8.setText("å¤‡æ³¨ï¼š");
 		jLabel8.setFont(new Font("Dialog", 0, 12));
 		gridx = 2;
 		gridy = 3;

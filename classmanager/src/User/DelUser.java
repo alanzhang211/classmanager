@@ -1,4 +1,4 @@
-package User;
+ï»¿package User;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -15,14 +15,14 @@ import javax.swing.JTextField;
 import jdbc.UserDb;
 
 public class DelUser extends JFrame implements ActionListener {
-	JButton j1 = new JButton("È·¶¨");
-	JButton j2 = new JButton("Çå¿Õ");
-	JButton j3 = new JButton("È¡Ïû");
-	JLabel l1 = new JLabel("ÊäÈëÓÃ»§Ãû==>½«");
+	JButton j1 = new JButton("ç¡®å®š");
+	JButton j2 = new JButton("æ¸…ç©º");
+	JButton j3 = new JButton("å–æ¶ˆ");
+	JLabel l1 = new JLabel("è¾“å…¥ç”¨æˆ·å==>å°†");
 	JLabel l2 = new JLabel();
 	JTextField t1 = new JTextField(15);
 	public DelUser() {
-		super("É¾³ıÓÃ»§ĞÅÏ¢");
+		super("åˆ é™¤ç”¨æˆ·ä¿¡æ¯");
 		Container con = this.getContentPane();
 		con.setLayout(new BorderLayout());
 		JPanel p = new JPanel();
@@ -45,7 +45,7 @@ public class DelUser extends JFrame implements ActionListener {
 		Object obj = e.getSource();
 		if (obj == j1) {
 			UserDb user=new UserDb();
-			String str="É¾³ı";
+			String str="åˆ é™¤";
 			l2.setText(str);
 			user.userDel(t1.getText());
 			

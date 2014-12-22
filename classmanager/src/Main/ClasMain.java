@@ -1,4 +1,4 @@
-package Main;
+ï»¿package Main;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -40,17 +40,17 @@ import stuInfo.SelectSInfo;
 
 public class ClasMain extends JFrame implements ActionListener {
 
-	// ¿ò¼ÜµÄ´óĞ¡
+	// æ¡†æ¶çš„å¤§å°
 	Dimension faceSize = new Dimension(600, 400);
 
-	// ½¨Á¢²Ëµ¥À¸
+	// å»ºç«‹èœå•æ 
 	JMenuBar mainMenu = new JMenuBar();
-	// ½¨Á¢¡°ÏµÍ³¹ÜÀí¡±²Ëµ¥×é
+	// å»ºç«‹â€œç³»ç»Ÿç®¡ç†â€èœå•ç»„
 	JMenu menuSystem = new JMenu();
 	JMenuItem user = new JMenuItem();
 	JMenuItem itemExit = new JMenuItem();
 
-	// ½¨Á¢¡°°à¼¶³ÉÔ±ĞÅÏ¢¹ÜÀí¡±²Ëµ¥×é
+	// å»ºç«‹â€œç­çº§æˆå‘˜ä¿¡æ¯ç®¡ç†â€èœå•ç»„
 	JMenu menuStu = new JMenu();
 	JMenuItem itemAddS = new JMenuItem();
 	JMenuItem itemEditS = new JMenuItem();
@@ -58,21 +58,21 @@ public class ClasMain extends JFrame implements ActionListener {
 	JMenuItem itemSelectS = new JMenuItem();
 	
 
-	// ½¨Á¢¡°Ñ§Éú¿¼ÆÀĞÅÏ¢¡±²Ëµ¥×é
+	// å»ºç«‹â€œå­¦ç”Ÿè€ƒè¯„ä¿¡æ¯â€èœå•ç»„
 	JMenu menuTst = new JMenu();
 	JMenuItem itemAddT = new JMenuItem();
 	JMenuItem itemEditT = new JMenuItem();
 	JMenuItem itemDeleteT = new JMenuItem();
 	JMenuItem itemSelectT = new JMenuItem();
 
-	// ½¨Á¢¡°°à·Ñ¹ÜÀí¡±²Ëµ¥×é
+	// å»ºç«‹â€œç­è´¹ç®¡ç†â€èœå•ç»„
 	JMenu menuSal = new JMenu();
 	JMenuItem itemAddSa = new JMenuItem();
 	JMenuItem itemEditSa = new JMenuItem();
 	JMenuItem itemDeleteSa = new JMenuItem();
 	JMenuItem itemSelectSa = new JMenuItem();
 	
-	// ½¨Á¢¡°Ñ§ÉúÆ½Ê±ĞÅÏ¢¡±²Ëµ¥×é
+	// å»ºç«‹â€œå­¦ç”Ÿå¹³æ—¶ä¿¡æ¯â€èœå•ç»„
 	JMenu menuAct = new JMenu();
 	JMenuItem itemAddAct = new JMenuItem();
 	JMenuItem itemEditAct = new JMenuItem();
@@ -81,11 +81,11 @@ public class ClasMain extends JFrame implements ActionListener {
 
 
 	/**
-	 * ³ÌĞò³õÊ¼»¯º¯Êı
+	 * ç¨‹åºåˆå§‹åŒ–å‡½æ•°
 	 */
 	public ClasMain(URL url) {
 		
-		// ÉèÖÃ¿ò¼ÜµÄ´óĞ¡
+		// è®¾ç½®æ¡†æ¶çš„å¤§å°
 		this.setSize(faceSize);
 		this.setLocation(350, 200);
 		this.setVisible(true);
@@ -97,77 +97,77 @@ public class ClasMain extends JFrame implements ActionListener {
 	}
 
 	/**
-	 * ³ÌĞò³õÊ¼»¯º¯Êı
+	 * ç¨‹åºåˆå§‹åŒ–å‡½æ•°
 	 */
 	private void Init(final URL url) throws Exception {
 		Container contentPane = this.getContentPane();
 		contentPane.setLayout(new BorderLayout());
 
-		menuSystem.setText("ÏµÍ³¹ÜÀí");
-		user.setText("ÓÃ»§¹ÜÀí");
+		menuSystem.setText("ç³»ç»Ÿç®¡ç†");
+		user.setText("ç”¨æˆ·ç®¡ç†");
 		user.setFont(new Font("Dialog", 0, 12));
-		itemExit.setText("ÍË³ö");
+		itemExit.setText("é€€å‡º");
 		itemExit.setFont(new Font("Dialog", 0, 12));
 		menuSystem.add(user);
 		menuSystem.add(itemExit);
 
-		menuStu.setText("°à¼¶³ÉÔ±ĞÅÏ¢¹ÜÀí");
-		itemAddS.setText("Ìí¼Ó");
+		menuStu.setText("ç­çº§æˆå‘˜ä¿¡æ¯ç®¡ç†");
+		itemAddS.setText("æ·»åŠ ");
 		itemAddS.setFont(new Font("Dialog", 0, 12));
-		itemEditS.setText("ĞŞ¸Ä");
+		itemEditS.setText("ä¿®æ”¹");
 		itemEditS.setFont(new Font("Dialog", 0, 12));
-		itemDeleteS.setText("É¾³ı");
+		itemDeleteS.setText("åˆ é™¤");
 		itemDeleteS.setFont(new Font("Dialog", 0, 12));
-		itemSelectS.setText("²éÑ¯");
+		itemSelectS.setText("æŸ¥è¯¢");
 		itemSelectS.setFont(new Font("Dialog", 0, 12));
 		menuStu.add(itemAddS);
 		menuStu.add(itemEditS);
 		menuStu.add(itemDeleteS);
 		menuStu.add(itemSelectS);
 
-		menuTst.setText("Ñ§Éú¿¼ÆÀĞÅÏ¢");
-		itemAddT.setText("Ìí¼Ó");
+		menuTst.setText("å­¦ç”Ÿè€ƒè¯„ä¿¡æ¯");
+		itemAddT.setText("æ·»åŠ ");
 		itemAddT.setFont(new Font("Dialog", 0, 12));
-		itemEditT.setText("ĞŞ¸Ä");
+		itemEditT.setText("ä¿®æ”¹");
 		itemEditT.setFont(new Font("Dialog", 0, 12));
-		itemDeleteT.setText("É¾³ı");
+		itemDeleteT.setText("åˆ é™¤");
 		itemDeleteT.setFont(new Font("Dialog", 0, 12));
-		itemSelectT.setText("²éÑ¯");
+		itemSelectT.setText("æŸ¥è¯¢");
 		itemSelectT.setFont(new Font("Dialog", 0, 12));
 		menuTst.add(itemAddT);
 		menuTst.add(itemEditT);
 		menuTst.add(itemDeleteT);
 		menuTst.add(itemSelectT);
 		
-		menuAct.setText("Ñ§ÉúÆ½Ê±ĞÅÏ¢");
-		itemAddAct.setText("Ìí¼Ó");
+		menuAct.setText("å­¦ç”Ÿå¹³æ—¶ä¿¡æ¯");
+		itemAddAct.setText("æ·»åŠ ");
 		itemAddAct.setFont(new Font("Dialog", 0, 12));
-		itemEditAct.setText("ĞŞ¸Ä");
+		itemEditAct.setText("ä¿®æ”¹");
 		itemEditAct.setFont(new Font("Dialog", 0, 12));
-		itemDeleteAct.setText("É¾³ı");
+		itemDeleteAct.setText("åˆ é™¤");
 		itemDeleteAct.setFont(new Font("Dialog", 0, 12));
-		itemSelectAct.setText("²éÑ¯");
+		itemSelectAct.setText("æŸ¥è¯¢");
 		itemSelectAct.setFont(new Font("Dialog", 0, 12));
 		menuAct.add(itemAddAct);
 		menuAct.add(itemEditAct);
 		menuAct.add(itemDeleteAct);
 		menuAct.add(itemSelectAct);
 
-		menuSal.setText("°à·Ñ¹ÜÀí");
-		itemAddSa.setText("Ìí¼Ó");
+		menuSal.setText("ç­è´¹ç®¡ç†");
+		itemAddSa.setText("æ·»åŠ ");
 		itemAddSa.setFont(new Font("Dialog", 0, 12));
-		itemEditSa.setText("ĞŞ¸Ä");
+		itemEditSa.setText("ä¿®æ”¹");
 		itemEditSa.setFont(new Font("Dialog", 0, 12));
-		itemDeleteSa.setText("É¾³ı");
+		itemDeleteSa.setText("åˆ é™¤");
 		itemDeleteSa.setFont(new Font("Dialog", 0, 12));
-		itemSelectSa.setText("²éÑ¯");
+		itemSelectSa.setText("æŸ¥è¯¢");
 		itemSelectSa.setFont(new Font("Dialog", 0, 12));
 		menuSal.add(itemAddSa);
 		menuSal.add(itemEditSa);
 		menuSal.add(itemDeleteSa);
 		menuSal.add(itemSelectSa);
 
-		// Ìí¼ÓËùÓĞµÄ²Ëµ¥×é
+		// æ·»åŠ æ‰€æœ‰çš„èœå•ç»„
 		mainMenu.add(menuSystem);
 		mainMenu.add(menuStu);
 		mainMenu.add(menuTst);
@@ -175,7 +175,7 @@ public class ClasMain extends JFrame implements ActionListener {
 		mainMenu.add(menuAct);
 		this.setJMenuBar(mainMenu);
 
-		// Ìí¼Ó¼àÌıÆ÷
+		// æ·»åŠ ç›‘å¬å™¨
 		itemExit.addActionListener(this);
 		user.addActionListener(this);
 		itemAddS.addActionListener(this);
@@ -195,7 +195,7 @@ public class ClasMain extends JFrame implements ActionListener {
 		itemDeleteSa.addActionListener(this);
 		itemSelectSa.addActionListener(this);
 		
-		JLabel jLabel=new JLabel("»¶Ó­µÇÂ½°à¼¶¹ÜÀíÏµÍ³",JLabel.CENTER);
+		JLabel jLabel=new JLabel("æ¬¢è¿ç™»é™†ç­çº§ç®¡ç†ç³»ç»Ÿ",JLabel.CENTER);
 		jLabel.setFont(new Font("Dialog", 0, 30));
 		jLabel.setForeground(Color.blue);
 	
@@ -203,14 +203,14 @@ public class ClasMain extends JFrame implements ActionListener {
 		     public void paintComponent(Graphics g) {
 		         ImageIcon icon =
 		                 new ImageIcon(url);
-		         // Í¼Æ¬Ëæ´°Ìå´óĞ¡¶ø±ä»¯
+		         // å›¾ç‰‡éšçª—ä½“å¤§å°è€Œå˜åŒ–
 		         g.drawImage(icon.getImage(), 0, 0, this.getSize().width,this.getSize().height,this);
 		     }
 		 };
 		 
 		 panel.add(jLabel);
 		 this.add(panel);
-		// ¹Ø±Õ³ÌĞòÊ±µÄ²Ù×÷
+		// å…³é—­ç¨‹åºæ—¶çš„æ“ä½œ
 		this.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {
 				System.exit(0);
@@ -218,70 +218,70 @@ public class ClasMain extends JFrame implements ActionListener {
 		});
 	}
 
-	// ÊÂ¼ş´¦Àí
+	// äº‹ä»¶å¤„ç†
 	public void actionPerformed(final ActionEvent e) {
 		final Object obj = e.getSource();
-		if (obj == user) { // ÓÃ»§¹ÜÀí
+		if (obj == user) { // ç”¨æˆ·ç®¡ç†
 			new User();
-		} else if (obj == itemExit) { // ÍË³ö
+		} else if (obj == itemExit) { // é€€å‡º
 			System.exit(0);
 		}
 
-		// ½¨Á¢¡°°à¼¶³ÉÔ±ĞÅÏ¢¹ÜÀí¡±
-		else if (obj == itemAddS) { // Ìí¼Ó
+		// å»ºç«‹â€œç­çº§æˆå‘˜ä¿¡æ¯ç®¡ç†â€
+		else if (obj == itemAddS) { // æ·»åŠ 
 			new AddSInfo();
 			
-		} else if (obj == itemEditS) { // ĞŞ¸Ä
+		} else if (obj == itemEditS) { // ä¿®æ”¹
 			new EditSInfo();
 
-		} else if (obj == itemDeleteS) { // É¾³ı
+		} else if (obj == itemDeleteS) { // åˆ é™¤
 			new DeleteSInfo();
 
-		} else if (obj == itemSelectS) { // ²éÑ¯
+		} else if (obj == itemSelectS) { // æŸ¥è¯¢
 			new SelectSInfo();
 		}
 
-		// ½¨Á¢¡°Ñ§Éú¿¼ÆÀĞÅÏ¢¡±
-		else if (obj == itemAddT) { // Ìí¼Ó
+		// å»ºç«‹â€œå­¦ç”Ÿè€ƒè¯„ä¿¡æ¯â€
+		else if (obj == itemAddT) { // æ·»åŠ 
 			new AddSCInfo();
 
-		} else if (obj == itemEditT) { // ĞŞ¸Ä
+		} else if (obj == itemEditT) { // ä¿®æ”¹
 			new EditSCInfo();
 
-		} else if (obj == itemDeleteT) { // É¾³ı
+		} else if (obj == itemDeleteT) { // åˆ é™¤
 			new DeleteSCInfo();
 
-		} else if (obj == itemSelectT) { // ²éÑ¯
+		} else if (obj == itemSelectT) { // æŸ¥è¯¢
 			new SelectSCInfo();
 
 		}
 		
-		// ½¨Á¢¡°Ñ§ÉúÆ½Ê±ĞÅÏ¢¡±
-		else if (obj == itemAddAct) { // Ìí¼Ó
+		// å»ºç«‹â€œå­¦ç”Ÿå¹³æ—¶ä¿¡æ¯â€
+		else if (obj == itemAddAct) { // æ·»åŠ 
 			new AddSActInfo();
 
-		} else if (obj == itemEditAct) { // ĞŞ¸Ä
+		} else if (obj == itemEditAct) { // ä¿®æ”¹
 			new EditSActInfo();
 
-		} else if (obj == itemDeleteAct) { // É¾³ı
+		} else if (obj == itemDeleteAct) { // åˆ é™¤
 			new DeleteSActInfo();
 
-		} else if (obj == itemSelectAct) { // ²éÑ¯
+		} else if (obj == itemSelectAct) { // æŸ¥è¯¢
 			new SelectSActInfo();
 
 		}
 
-		// ½¨Á¢¡°°à·Ñ¹ÜÀí¡±
-		else if (obj == itemAddSa) { // Ìí¼Ó
+		// å»ºç«‹â€œç­è´¹ç®¡ç†â€
+		else if (obj == itemAddSa) { // æ·»åŠ 
 			new AddCCInfo();
 
-		} else if (obj == itemEditSa) { // ĞŞ¸Ä
+		} else if (obj == itemEditSa) { // ä¿®æ”¹
 			new EditCCInfo();
 
-		} else if (obj == itemDeleteSa) { // É¾³ı
+		} else if (obj == itemDeleteSa) { // åˆ é™¤
 			new DeleteCCInfo();
 
-		} else if (obj == itemSelectSa) { // ²éÑ¯
+		} else if (obj == itemSelectSa) { // æŸ¥è¯¢
 			new SelectCCInfo();
 		}
 

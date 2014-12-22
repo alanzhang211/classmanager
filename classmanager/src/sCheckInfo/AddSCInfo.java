@@ -1,4 +1,4 @@
-package sCheckInfo;
+ï»¿package sCheckInfo;
 
 import java.awt.GridBagConstraints;
 import java.awt.event.ActionEvent;
@@ -15,7 +15,7 @@ import jdbc.StuDb;
 public class AddSCInfo extends SCheckInfo implements ActionListener {
 	public AddSCInfo() {
 
-		this.setTitle("¿¼ÆÀĞÅÏ¢Ìí¼Ó");
+		this.setTitle("è€ƒè¯„ä¿¡æ¯æ·»åŠ ");
 		j1.addActionListener(this);
 		j2.addActionListener(this);
 		j3.addActionListener(this);
@@ -38,7 +38,7 @@ public class AddSCInfo extends SCheckInfo implements ActionListener {
 			sUsualScore.setText(null);
 			sRank.setText(null);
 			sSex.setText(null);
-		} else if (obj == j3) { // ÍË³ö
+		} else if (obj == j3) { // é€€å‡º
 			this.dispose();
 		}
 	}

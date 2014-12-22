@@ -1,4 +1,4 @@
-package clsCost;
+ï»¿package clsCost;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -17,15 +17,15 @@ import jdbc.ScDb;
 
 public class DeleteCCInfo extends JFrame implements ActionListener {
 
-	JButton j1 = new JButton("È·¶¨");
-	JButton j2 = new JButton("Çå¿Õ");
-	JButton j3 = new JButton("È¡Ïû");
-	JLabel l1 = new JLabel("ÊäÈëĞòºÅ==>>>½«ĞòºÅÎª");
+	JButton j1 = new JButton("ç¡®å®š");
+	JButton j2 = new JButton("æ¸…ç©º");
+	JButton j3 = new JButton("å–æ¶ˆ");
+	JLabel l1 = new JLabel("è¾“å…¥åºå·==>>>å°†åºå·ä¸º");
 	JLabel l2 = new JLabel();
 	JTextField t1 = new JTextField(15);
 
 	public DeleteCCInfo() {
-		super("°à·ÑĞÅÏ¢É¾³ı");
+		super("ç­è´¹ä¿¡æ¯åˆ é™¤");
 		Container con = this.getContentPane();
 		con.setLayout(new BorderLayout());
 		JPanel p = new JPanel();
@@ -49,7 +49,7 @@ public class DeleteCCInfo extends JFrame implements ActionListener {
 		Object obj = e.getSource();
 		if (obj == j1) {
 			CcDb delcc = new CcDb();
-			String str = "µÄÊı¾İÉ¾³ı";
+			String str = "çš„æ•°æ®åˆ é™¤";
 			l2.setText(str);
 			delcc.ccDel(t1.getText());
 

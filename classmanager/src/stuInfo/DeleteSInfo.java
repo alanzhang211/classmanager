@@ -1,4 +1,4 @@
-package stuInfo;
+ï»¿package stuInfo;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -16,15 +16,15 @@ import jdbc.StuDb;
 
 @SuppressWarnings("serial")
 public class DeleteSInfo extends JFrame implements ActionListener {
-	JButton j1 = new JButton("È·¶¨");
-	JButton j2 = new JButton("Çå¿Õ");
-	JButton j3 = new JButton("È¡Ïû");
-	JLabel l1 = new JLabel("ÊäÈëÑ§ºÅ===>>>½«Ñ§ºÅÎª");
+	JButton j1 = new JButton("ç¡®å®š");
+	JButton j2 = new JButton("æ¸…ç©º");
+	JButton j3 = new JButton("å–æ¶ˆ");
+	JLabel l1 = new JLabel("è¾“å…¥å­¦å·===>>>å°†å­¦å·ä¸º");
 	JLabel l2 = new JLabel();
 	JTextField t1 = new JTextField(15);
 	
 	public DeleteSInfo() {
-		 super("ĞÅÏ¢É¾³ı");
+		 super("ä¿¡æ¯åˆ é™¤");
 		Container con = this.getContentPane();
 		con.setLayout(new BorderLayout());
 		JPanel p = new JPanel();
@@ -47,7 +47,7 @@ public class DeleteSInfo extends JFrame implements ActionListener {
 		Object obj = e.getSource();
 		if (obj == j1) {
 			StuDb delstu=new StuDb();
-			String str="µÄĞÅÏ¢É¾³ı";
+			String str="çš„ä¿¡æ¯åˆ é™¤";
 			l2.setText(str);
 			delstu.stuDel(t1.getText());
 			

@@ -1,4 +1,4 @@
-package sActiveInfo;
+ï»¿package sActiveInfo;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -16,15 +16,15 @@ import jdbc.ActDb;
 
 @SuppressWarnings("serial")
 public class DeleteSActInfo extends JFrame implements ActionListener {
-	JButton j1 = new JButton("È·¶¨");
-	JButton j2 = new JButton("Çå¿Õ");
-	JButton j3 = new JButton("È¡Ïû");
-	JLabel l1 = new JLabel("ÊäÈëÑ§ºÅ===>>>½«Ñ§ºÅÎª");
+	JButton j1 = new JButton("ç¡®å®š");
+	JButton j2 = new JButton("æ¸…ç©º");
+	JButton j3 = new JButton("å–æ¶ˆ");
+	JLabel l1 = new JLabel("è¾“å…¥å­¦å·===>>>å°†å­¦å·ä¸º");
 	JLabel l2 = new JLabel();
 	JTextField t1 = new JTextField(15);
 	
 	public DeleteSActInfo() {
-		 super("Ñ§ÉúÆ½Ê±ĞÅÏ¢É¾³ı");
+		 super("å­¦ç”Ÿå¹³æ—¶ä¿¡æ¯åˆ é™¤");
 		Container con = this.getContentPane();
 		con.setLayout(new BorderLayout());
 		JPanel p = new JPanel();
@@ -47,7 +47,7 @@ public class DeleteSActInfo extends JFrame implements ActionListener {
 		Object obj = e.getSource();
 		if (obj == j1) {
 			ActDb delAct=new ActDb();
-			String str="µÄĞÅÏ¢É¾³ı";
+			String str="çš„ä¿¡æ¯åˆ é™¤";
 			l2.setText(str);
 			delAct.ActDel(t1.getText());
 			 

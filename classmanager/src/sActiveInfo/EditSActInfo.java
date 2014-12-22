@@ -1,4 +1,4 @@
-package sActiveInfo;
+﻿package sActiveInfo;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,7 +10,7 @@ import jdbc.ActDb;
 public class EditSActInfo extends ActInfo implements ActionListener{
 
 	public EditSActInfo() {
-		this.setTitle("ѧ��ƽʱ��Ϣ�޸�");
+		this.setTitle("学生平时信息修改");
 		j1.addActionListener(this);
 		j2.addActionListener(this);
 		j3.addActionListener(this);
@@ -29,7 +29,7 @@ public class EditSActInfo extends ActInfo implements ActionListener{
 			}
 			
 
-		}else if (obj == j2) { // �˳�
+		}else if (obj == j2) { // 退出
 			this.dispose();
 		} else if (obj == j3) {
 			sNum.setText(null);

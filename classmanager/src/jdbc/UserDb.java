@@ -1,4 +1,4 @@
-package jdbc;
+ï»¿package jdbc;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,7 +16,7 @@ public class UserDb {
 		this.passworld = passworld;
 
 		if (name == null || name.equals("")) {
-			JOptionPane.showMessageDialog(null, "ÇëÊäÈëÑ§ÉúĞÕÃû", "´íÎó",
+			JOptionPane.showMessageDialog(null, "è¯·è¾“å…¥å­¦ç”Ÿå§“å", "é”™è¯¯",
 					JOptionPane.ERROR_MESSAGE);
 			return;
 		} else {
@@ -24,19 +24,19 @@ public class UserDb {
 			java.sql.PreparedStatement ps = null;
 			ResultSet rs = null;
 			try {
-				// ½¨Á¢Á¬½Ó
+				// å»ºç«‹è¿æ¥
 				conn = Database.getConnection();
-				// ´´½¨Óï¾ä
+				// åˆ›å»ºè¯­å¥
 				String sql = "insert into admin(Name,Passworld) values(?,?)";
 				ps = conn.prepareStatement(sql);
 				ps.setString(1, name);
 				ps.setString(2, passworld);
 				int i = ps.executeUpdate();
-				JOptionPane.showMessageDialog(null, "³É¹¦Ìí¼Ó" + i + "ÌõĞÂµÄ¼ÍÂ¼£¡");
+				JOptionPane.showMessageDialog(null, "æˆåŠŸæ·»åŠ " + i + "æ¡æ–°çš„çºªå½•ï¼");
 
 			} catch (Exception e) {
 				System.out.println(e);
-				JOptionPane.showMessageDialog(null, "±£´æÊ§°Ü", "´íÎó",
+				JOptionPane.showMessageDialog(null, "ä¿å­˜å¤±è´¥", "é”™è¯¯",
 						JOptionPane.ERROR_MESSAGE);
 			} finally {
 				Database.free(rs, ps, conn);
@@ -49,7 +49,7 @@ public class UserDb {
 		this.passworld = passworld;
 
 		if (name == null || name.equals("")) {
-			JOptionPane.showMessageDialog(null, "ÇëÊäÈëÑ§ºÅ", "´íÎó",
+			JOptionPane.showMessageDialog(null, "è¯·è¾“å…¥å­¦å·", "é”™è¯¯",
 					JOptionPane.ERROR_MESSAGE);
 			return;
 		} else {
@@ -57,20 +57,20 @@ public class UserDb {
 			java.sql.Statement st = null;
 			ResultSet rs = null;
 			try {
-				// ½¨Á¢Á¬½Ó
+				// å»ºç«‹è¿æ¥
 				conn = Database.getConnection();
-				// ´´½¨Óï¾ä
+				// åˆ›å»ºè¯­å¥
 				st = conn.createStatement();
 				String sql = "update admin set Passworld='" + passworld
 						+ "',Name='" + name + "' where Name='" + name + "'";
 
-				// Ö´ĞĞÓï¾ä
+				// æ‰§è¡Œè¯­å¥
 				int i = st.executeUpdate(sql);
 
-				JOptionPane.showMessageDialog(null, "³É¹¦ĞŞ¸Ä" + i + "ÌõĞÂµÄ¼ÍÂ¼£¡");
+				JOptionPane.showMessageDialog(null, "æˆåŠŸä¿®æ”¹" + i + "æ¡æ–°çš„çºªå½•ï¼");
 			} catch (Exception e) {
 				System.out.println(e);
-				JOptionPane.showMessageDialog(null, "¸üĞÂÊ§°Ü", "´íÎó",
+				JOptionPane.showMessageDialog(null, "æ›´æ–°å¤±è´¥", "é”™è¯¯",
 						JOptionPane.ERROR_MESSAGE);
 			} finally {
 				Database.free(rs, st, conn);
@@ -88,10 +88,10 @@ public class UserDb {
 			conn = Database.getConnection();
 			st = conn.createStatement();
 			int i = st.executeUpdate(sql);
-			JOptionPane.showMessageDialog(null, "³É¹¦É¾³ı" + i + "ÌõĞÂµÄ¼ÍÂ¼£¡");
+			JOptionPane.showMessageDialog(null, "æˆåŠŸåˆ é™¤" + i + "æ¡æ–°çš„çºªå½•ï¼");
 		} catch (Exception e) {
 			System.out.println(e);
-			JOptionPane.showMessageDialog(null, "É¾³ıÊ§°Ü", "´íÎó",
+			JOptionPane.showMessageDialog(null, "åˆ é™¤å¤±è´¥", "é”™è¯¯",
 					JOptionPane.ERROR_MESSAGE);
 		} finally {
 			Database.free(rs, st, conn);

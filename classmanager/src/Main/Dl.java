@@ -1,4 +1,4 @@
-package Main;
+ï»¿package Main;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -21,19 +21,19 @@ import javax.swing.JTextField;
 import jdbc.Database;
 
 public class Dl {	
-	private  URL url=ClasMain.class.getClassLoader().getResource("images/ÈıÃñ.jpg");
+	private  URL url=ClasMain.class.getClassLoader().getResource("images/ä¸‰æ°‘.jpg");
 
 	public Dl() {
-		final JFrame f = new JFrame("ÃÜÂëµÇÂ½½çÃæ");
+		final JFrame f = new JFrame("å¯†ç ç™»é™†ç•Œé¢");
 		f.setLocation(512, 256);
 		Container contentPane = f.getContentPane();
 		contentPane.setLayout(new BorderLayout());
 		JPanel p1 = new JPanel();
-		final JButton button = new JButton("µÇÂ½");
+		final JButton button = new JButton("ç™»é™†");
 		p1.setLayout(new GridLayout(2, 2));
-		p1.setBorder(BorderFactory.createTitledBorder("ÇëÊäÈëÄúµÄµÇÂ¼ĞÅÏ¢"));
-		JLabel l1 = new JLabel("ÊäÈëÃÜÂë£º");
-		JLabel l2 = new JLabel("ÊäÈëºó£¬°´µÇÂ½°´Å¥");
+		p1.setBorder(BorderFactory.createTitledBorder("è¯·è¾“å…¥æ‚¨çš„ç™»å½•ä¿¡æ¯"));
+		JLabel l1 = new JLabel("è¾“å…¥å¯†ç ï¼š");
+		JLabel l2 = new JLabel("è¾“å…¥åï¼ŒæŒ‰ç™»é™†æŒ‰é’®");
 		final JPasswordField t1 = new JPasswordField();
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -43,7 +43,7 @@ public class Dl {
 				try {
 					if (obj == button) {
 						if (str.equals("")) {
-							JOptionPane.showMessageDialog(f, "ÃÜÂë²»ÄÜÎª¿Õ");
+							JOptionPane.showMessageDialog(f, "å¯†ç ä¸èƒ½ä¸ºç©º");
 							return;
 						}
 						java.sql.Connection conn = null;
@@ -56,13 +56,13 @@ public class Dl {
 						rs = st.executeQuery(sqlString);
 
 						if (rs.next() != false) {
-							JOptionPane.showMessageDialog(f, "µÇÂ½³É¹¦");
+							JOptionPane.showMessageDialog(f, "ç™»é™†æˆåŠŸ");
 							new ClasMain(url);
 							f.dispose();
 							conn.close();  
 
 						} else {
-							JOptionPane.showMessageDialog(f, "ÃÜÂë´íÎó");
+							JOptionPane.showMessageDialog(f, "å¯†ç é”™è¯¯");
 						}
 					}
 				} catch (SQLException e1) {

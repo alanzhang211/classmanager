@@ -1,4 +1,4 @@
-package sActiveInfo;
+ï»¿package sActiveInfo;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -21,15 +21,15 @@ public class SelectSActInfo extends JFrame implements ActionListener {
 
 	JPanel panel1 = new JPanel();
 	JPanel panel2 = new JPanel();
-	JLabel label1 = new JLabel("°´Ñ§ºÅ²éÕÒ");
-	JLabel label2 = new JLabel("ÖÁ");
+	JLabel label1 = new JLabel("æŒ‰å­¦å·æŸ¥æ‰¾");
+	JLabel label2 = new JLabel("è‡³");
 	JTextField tField1 = new JTextField(15);
 	JTextField tField2 = new JTextField(15);
-	JButton button1 = new JButton("È·¶¨");
-	JButton button2 = new JButton("ÍË³ö");
+	JButton button1 = new JButton("ç¡®å®š");
+	JButton button2 = new JButton("é€€å‡º");
 	String fromValue = null;
 	String toValue = null;
-	String[] Stu = { "Ñ§ºÅ", "ĞÕÃû", "ĞÔ±ğ", "²Î¼Ó»áÒéÇé¿ö", "²Î¼Ó»î¶¯Çé¿ö", "ÈÕÆÚ", "³ö²ÙÇé¿ö", "±¸×¢" };
+	String[] Stu = { "å­¦å·", "å§“å", "æ€§åˆ«", "å‚åŠ ä¼šè®®æƒ…å†µ", "å‚åŠ æ´»åŠ¨æƒ…å†µ", "æ—¥æœŸ", "å‡ºæ“æƒ…å†µ", "å¤‡æ³¨" };
 	String[][] StuInfo = null;
 
 	public SelectSActInfo() {
@@ -46,7 +46,7 @@ public class SelectSActInfo extends JFrame implements ActionListener {
 		panel2.add(button2);
 		add(panel1);
 		add(panel2);
-		setTitle("Ñ§ÉúÆ½Ê±ĞÅÏ¢");
+		setTitle("å­¦ç”Ÿå¹³æ—¶ä¿¡æ¯");
 		setLocation(400, 256);
 		setSize(600, 300);
 		setVisible(true);
@@ -64,7 +64,7 @@ public class SelectSActInfo extends JFrame implements ActionListener {
 				StuInfo = rAct.ActAllSearch("sNum", fromValue, toValue);
 				if (StuInfo == null) {
 					this.dispose();
-					JOptionPane.showMessageDialog(null, "Ã»ÓĞ·ûºÏÌõ¼şµÄ¼ÇÂ¼");
+					JOptionPane.showMessageDialog(null, "æ²¡æœ‰ç¬¦åˆæ¡ä»¶çš„è®°å½•");
 				} else {
 					JTable table = new JTable(StuInfo, Stu);
 					table.setPreferredScrollableViewportSize(new Dimension(550,

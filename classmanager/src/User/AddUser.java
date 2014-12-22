@@ -1,4 +1,4 @@
-package User;
+ï»¿package User;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -17,17 +17,17 @@ import jdbc.UserDb;
 
 public class AddUser extends JFrame implements ActionListener {
 
-	JLabel jLabel1 = new JLabel("ÓÃ»§Ãû");
-	JLabel jLabel2 = new JLabel("ÃÜÂë");
+	JLabel jLabel1 = new JLabel("ç”¨æˆ·å");
+	JLabel jLabel2 = new JLabel("å¯†ç ");
 	JTextField Name = new JTextField(15);
 	JTextField Passworld = new JTextField(15);
 
-	JButton j1 = new JButton("È·¶¨");
-	JButton j2 = new JButton("Çå¿Õ");
-	JButton j3 = new JButton("ÍË³ö");
+	JButton j1 = new JButton("ç¡®å®š");
+	JButton j2 = new JButton("æ¸…ç©º");
+	JButton j3 = new JButton("é€€å‡º");
 
 	public AddUser() {
-		super("Ìí¼ÓÓÃ»§");
+		super("æ·»åŠ ç”¨æˆ·");
 		Container contentPane = this.getContentPane();
 		contentPane.setLayout(new GridLayout(2, 1));
 		JPanel Panel1 = new JPanel();
@@ -56,14 +56,14 @@ public class AddUser extends JFrame implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 		Object obj = e.getSource();
-		if (obj == j1) {//Ìí¼Ó
+		if (obj == j1) {//æ·»åŠ 
 			UserDb user=new UserDb();
 			user.userAdd(Name.getText(), Passworld.getText());
 			
-		} else if (obj == j2) {//Çå¿Õ
+		} else if (obj == j2) {//æ¸…ç©º
 			Name.setText(null);
 			Passworld.setText(null);
-		}else if (obj==j3) {//ÍË³ö
+		}else if (obj==j3) {//é€€å‡º
 		this.dispose();	
 		}
 

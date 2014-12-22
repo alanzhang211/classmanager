@@ -1,4 +1,4 @@
-package jdbc;
+ï»¿package jdbc;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -24,7 +24,7 @@ public class CcDb {
 		cOut = out;
 		cTotal=(Double.parseDouble(cIn)-Double.parseDouble(cOut));
 		if (cDate == null ||cDate.equals("")) {
-			JOptionPane.showMessageDialog(null, "ÇëÊäÈëÈÕÆÚ", "´íÎó",
+			JOptionPane.showMessageDialog(null, "è¯·è¾“å…¥æ—¥æœŸ", "é”™è¯¯",
 					JOptionPane.ERROR_MESSAGE);
 			return;
 		} else {
@@ -32,9 +32,9 @@ public class CcDb {
 			java.sql.PreparedStatement ps = null;
 			ResultSet rs = null;
 			try {
-				// ½¨Á¢Á¬½Ó
+				// å»ºç«‹è¿æ¥
 				conn = Database.getConnection();
-				// ´´½¨Óï¾ä
+				// åˆ›å»ºè¯­å¥
 				String sql = "insert into ccostinfo(cName,cDate,cIn,cOut,cTotal) values(?,?,?,?,?)";
 				ps = conn.prepareStatement(sql);
 				ps.setString(1, cName);
@@ -43,11 +43,11 @@ public class CcDb {
 				ps.setString(4, cOut);
 				ps.setDouble(5, cTotal);
 				int i = ps.executeUpdate();
-				JOptionPane.showMessageDialog(null, "³É¹¦Ìí¼Ó" + i + "ÌõĞÂµÄ¼ÍÂ¼£¡");
+				JOptionPane.showMessageDialog(null, "æˆåŠŸæ·»åŠ " + i + "æ¡æ–°çš„çºªå½•ï¼");
 
 			} catch (Exception e) {
 				System.out.println(e);
-				JOptionPane.showMessageDialog(null, "±£´æÊ§°Ü", "´íÎó",
+				JOptionPane.showMessageDialog(null, "ä¿å­˜å¤±è´¥", "é”™è¯¯",
 						JOptionPane.ERROR_MESSAGE);
 			} finally {
 				Database.free(rs, ps, conn);
@@ -63,7 +63,7 @@ public class CcDb {
 		cIn = in;
 		cOut = out;
 		if (cDate == null || cDate.equals("")) {
-			JOptionPane.showMessageDialog(null, "ÇëÊäÈëÈÕÆÚ", "´íÎó",
+			JOptionPane.showMessageDialog(null, "è¯·è¾“å…¥æ—¥æœŸ", "é”™è¯¯",
 					JOptionPane.ERROR_MESSAGE);
 			return;
 		} else {
@@ -71,9 +71,9 @@ public class CcDb {
 			java.sql.Statement st = null;
 			ResultSet rs = null;
 			try {
-				// ½¨Á¢Á¬½Ó
+				// å»ºç«‹è¿æ¥
 				conn = Database.getConnection();
-				// ´´½¨Óï¾ä
+				// åˆ›å»ºè¯­å¥
 				st = conn.createStatement();
 				String sql = "update ccostinfo set cName='" + cName + "',cIn='"
 						+ cIn + "',cOut='" + cOut + "',cDate='" + cDate
@@ -81,13 +81,13 @@ public class CcDb {
 						+ (Integer.parseInt(cIn) - Integer.parseInt(cOut))
 						+ "' where cNum=" + Integer.parseInt(cNum) + "";
 
-				// Ö´ĞĞÓï¾ä
+				// æ‰§è¡Œè¯­å¥
 				int i = st.executeUpdate(sql);
 
-				JOptionPane.showMessageDialog(null, "³É¹¦ĞŞ¸Ä" + i + "ÌõĞÂµÄ¼ÍÂ¼£¡");
+				JOptionPane.showMessageDialog(null, "æˆåŠŸä¿®æ”¹" + i + "æ¡æ–°çš„çºªå½•ï¼");
 			} catch (Exception e) {
 				System.out.println(e);
-				JOptionPane.showMessageDialog(null, "¸üĞÂÊ§°Ü", "´íÎó",
+				JOptionPane.showMessageDialog(null, "æ›´æ–°å¤±è´¥", "é”™è¯¯",
 						JOptionPane.ERROR_MESSAGE);
 			} finally {
 				Database.free(rs, st, conn);
@@ -106,10 +106,10 @@ public class CcDb {
 			conn = Database.getConnection();
 			st = conn.createStatement();
 			int i = st.executeUpdate(sql);
-			JOptionPane.showMessageDialog(null, "³É¹¦É¾³ı" + i + "ÌõĞÂµÄ¼ÍÂ¼£¡");
+			JOptionPane.showMessageDialog(null, "æˆåŠŸåˆ é™¤" + i + "æ¡æ–°çš„çºªå½•ï¼");
 		} catch (Exception e) {
 			System.out.println(e);
-			JOptionPane.showMessageDialog(null, "É¾³ıÊ§°Ü", "´íÎó",
+			JOptionPane.showMessageDialog(null, "åˆ é™¤å¤±è´¥", "é”™è¯¯",
 					JOptionPane.ERROR_MESSAGE);
 		} finally {
 			Database.free(rs, st, conn);
@@ -174,12 +174,12 @@ public class CcDb {
 		String sql = null;
 		String balance=null;
 		try {
-			// ½¨Á¢Á¬½Ó
+			// å»ºç«‹è¿æ¥
 			conn = Database.getConnection();
-			// ´´½¨Óï¾ä
+			// åˆ›å»ºè¯­å¥
 			st = conn.createStatement();
 
-			// Ö´ĞĞÓï¾ä
+			// æ‰§è¡Œè¯­å¥
 			rs = st.executeQuery("select sum(cTotal) from ccostinfo");
 			 while (rs.next()) {
 				 balance=rs.getString(1);

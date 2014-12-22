@@ -1,4 +1,4 @@
-package clsCost;
+ï»¿package clsCost;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -35,18 +35,18 @@ public class ClsCostInfo extends JFrame {
 	JTextField cOut = new JTextField(15);
 	JTextField cNum = new JTextField(15);
 
-	JButton j1 = new JButton("È·¶¨");
-	JButton j2 = new JButton("Çå¿Õ");
-	JButton j3 = new JButton("ÍË³ö");
+	JButton j1 = new JButton("ç¡®å®š");
+	JButton j2 = new JButton("æ¸…ç©º");
+	JButton j3 = new JButton("é€€å‡º");
 
 	GridBagLayout girdBag = new GridBagLayout();
 	GridBagConstraints girdBagCon;
 
 	public ClsCostInfo() {
-		// ÉèÖÃ¿ò¼ÜµÄ´óĞ¡
+		// è®¾ç½®æ¡†æ¶çš„å¤§å°
 		this.setSize(faceSize);
-		// ÉèÖÃ±êÌâ
-		this.setTitle("°à·Ñ¹ÜÀí");
+		// è®¾ç½®æ ‡é¢˜
+		this.setTitle("ç­è´¹ç®¡ç†");
 		setLocation(256, 128);
 		this.setResizable(false);
 		this.setVisible(true);
@@ -62,10 +62,10 @@ public class ClsCostInfo extends JFrame {
 		contentPane = this.getContentPane();
 		contentPane.setLayout(new BorderLayout());
 
-		// ÖĞ²¿Ãæ°åµÄ²¼¾Ö
+		// ä¸­éƒ¨é¢æ¿çš„å¸ƒå±€
 		Panel.setLayout(girdBag);
 
-		jLabel1.setText("ÈÕ	ÆÚ£º");
+		jLabel1.setText("æ—¥	æœŸï¼š");
 		jLabel1.setFont(new Font("Dialog", 0, 12));
 		girdBagCon = new GridBagConstraints();
 		girdBagCon.gridx = 0;
@@ -81,7 +81,7 @@ public class ClsCostInfo extends JFrame {
 		girdBag.setConstraints(cDate, girdBagCon);
 		Panel.add(cDate);
 
-		jLabel2.setText("Ğò	ºÅ£º");
+		jLabel2.setText("åº	å·ï¼š");
 		jLabel2.setFont(new Font("Dialog", 0, 12));
 		girdBagCon = new GridBagConstraints();
 		girdBagCon.gridx = 2;
@@ -97,7 +97,7 @@ public class ClsCostInfo extends JFrame {
 		girdBag.setConstraints(cNum, girdBagCon);
 		Panel.add(cNum);
 
-		jLabel3.setText("ÊÕ	Èë£º");
+		jLabel3.setText("æ”¶	å…¥ï¼š");
 		jLabel3.setFont(new Font("Dialog", 0, 12));
 		girdBagCon = new GridBagConstraints();
 		girdBagCon.gridx = 0;
@@ -113,7 +113,7 @@ public class ClsCostInfo extends JFrame {
 		girdBag.setConstraints(cIn, girdBagCon);
 		Panel.add(cIn);
 
-		jLabel4.setText("Ö§	³ö£º");
+		jLabel4.setText("æ”¯	å‡ºï¼š");
 		jLabel4.setFont(new Font("Dialog", 0, 12));
 		girdBagCon = new GridBagConstraints();
 		girdBagCon.gridx = 2;
@@ -129,7 +129,7 @@ public class ClsCostInfo extends JFrame {
 		girdBag.setConstraints(cOut, girdBagCon);
 		Panel.add(cOut);
 
-		jLabel6.setText("Ïî	Ä¿£º");
+		jLabel6.setText("é¡¹	ç›®ï¼š");
 		jLabel6.setFont(new Font("Dialog", 0, 12));
 		girdBagCon = new GridBagConstraints();
 		girdBagCon.gridx = 0;

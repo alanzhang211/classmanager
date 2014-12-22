@@ -1,4 +1,4 @@
-package User;
+锘縫ackage User;
 
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -8,13 +8,13 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 public class User extends JFrame implements ActionListener{
-	JButton j1=new JButton("查看");
-	JButton j2=new JButton("添加");
-	JButton j3=new JButton("修改");
-	JButton j4=new JButton("删除");
+	JButton j1=new JButton("鏌ョ湅");
+	JButton j2=new JButton("娣诲姞");
+	JButton j3=new JButton("淇敼");
+	JButton j4=new JButton("鍒犻櫎");
 	
 	public User() { 
-		super("用户操作界面");
+		super("鐢ㄦ埛鎿嶄綔鐣岄潰");
 		setLayout(new GridLayout(2, 2));
 		setSize(250, 100);
 		setLocation(512, 256);
@@ -32,16 +32,16 @@ public class User extends JFrame implements ActionListener{
 
 	public void actionPerformed(ActionEvent e) {
 		Object obj = e.getSource();
-		if (obj == j1) { // 查看用户
+		if (obj == j1) { // 鏌ョ湅鐢ㄦ埛
 			new SelectUser();
 			
-		} else if (obj == j2) { //添加用户
+		} else if (obj == j2) { //娣诲姞鐢ㄦ埛
 			new AddUser();
 			
-		} else if (obj == j3) { //修改用户信息
+		} else if (obj == j3) { //淇敼鐢ㄦ埛淇℃伅
 			new ModifyUser();
 			
-		} else if (obj == j4) { // 删除用户
+		} else if (obj == j4) { // 鍒犻櫎鐢ㄦ埛
 			new DelUser();
 		}
 		

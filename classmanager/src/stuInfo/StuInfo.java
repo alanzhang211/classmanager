@@ -1,4 +1,4 @@
-package stuInfo;
+ï»¿package stuInfo;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -22,7 +22,7 @@ import jdbc.StuDb;
 
 /**
  * 
- * Ñ§ÉúĞÅÏ¢±í
+ * å­¦ç”Ÿä¿¡æ¯è¡¨
  * 
  */
 
@@ -31,7 +31,7 @@ public class StuInfo extends JFrame {
 	Container contentPane;
 	JPanel Panel = new JPanel();
 
-	// ¿ò¼ÜµÄ´óĞ¡
+	// æ¡†æ¶çš„å¤§å°
 	Dimension faceSize = new Dimension(800, 500);
 
 	JLabel jLabel1 = new JLabel();
@@ -56,9 +56,9 @@ public class StuInfo extends JFrame {
 	JTextField sPhone = new JTextField(15);
 	JTextField sHome = new JTextField(15);
 
-	JButton j1 = new JButton("È·¶¨");
-	JButton j2 = new JButton("ÍË³ö");
-	JButton j3 = new JButton("Çå¿Õ");
+	JButton j1 = new JButton("ç¡®å®š");
+	JButton j2 = new JButton("é€€å‡º");
+	JButton j3 = new JButton("æ¸…ç©º");
 
 	GridBagLayout girdBag = new GridBagLayout();
 	GridBagConstraints girdBagCon;
@@ -69,10 +69,10 @@ public class StuInfo extends JFrame {
 	Insets insets;
 
 	public StuInfo() {
-		// ÉèÖÃ¿ò¼ÜµÄ´óĞ¡
+		// è®¾ç½®æ¡†æ¶çš„å¤§å°
 		this.setSize(faceSize);
-		// ÉèÖÃ±êÌâ
-		this.setTitle("Ñ§Éú×ÛºÏĞÅÏ¢¹ÜÀí");
+		// è®¾ç½®æ ‡é¢˜
+		this.setTitle("å­¦ç”Ÿç»¼åˆä¿¡æ¯ç®¡ç†");
 		setLocation(256, 128);
 		this.setResizable(false);
 		this.setVisible(true);
@@ -87,10 +87,10 @@ public class StuInfo extends JFrame {
 		contentPane = this.getContentPane();
 		contentPane.setLayout(new BorderLayout());
 
-		// ÖĞ²¿Ãæ°åµÄ²¼¾Ö
+		// ä¸­éƒ¨é¢æ¿çš„å¸ƒå±€
 		Panel.setLayout(girdBag);
 
-		jLabel1.setText("Ñ§	ºÅ£º");
+		jLabel1.setText("å­¦	å·ï¼š");
 		jLabel1.setFont(new Font("Dialog", 0, 12));
 		gridx = 0;
 		gridy = 0;
@@ -110,7 +110,7 @@ public class StuInfo extends JFrame {
 		girdBag.setConstraints(sNum, girdBagCon);
 		Panel.add(sNum);
 
-		jLabel2.setText("ĞÕ	Ãû£º");
+		jLabel2.setText("å§“	åï¼š");
 		jLabel2.setFont(new Font("Dialog", 0, 12));
 		gridx = 2;
 		gridy = 0;
@@ -130,7 +130,7 @@ public class StuInfo extends JFrame {
 		girdBag.setConstraints(sName, girdBagCon);
 		Panel.add(sName);
 
-		jLabel3.setText("ĞÔ	±ğ£º");
+		jLabel3.setText("æ€§	åˆ«ï¼š");
 		jLabel3.setFont(new Font("Dialog", 0, 12));
 		gridx = 0;
 		gridy = 1;
@@ -150,7 +150,7 @@ public class StuInfo extends JFrame {
 		girdBag.setConstraints(sNation, girdBagCon);
 		Panel.add(sNation);
 
-		jLabel4.setText("Ãñ	×å£º");
+		jLabel4.setText("æ°‘	æ—ï¼š");
 		jLabel4.setFont(new Font("Dialog", 0, 12));
 		gridx = 2;
 		gridy = 1;
@@ -170,7 +170,7 @@ public class StuInfo extends JFrame {
 		girdBag.setConstraints(sSex, girdBagCon);
 		Panel.add(sSex);
 
-		jLabel5.setText("³öÉúÄêÔÂ£º");
+		jLabel5.setText("å‡ºç”Ÿå¹´æœˆï¼š");
 		jLabel5.setFont(new Font("Dialog", 0, 12));
 		gridx = 0;
 		gridy = 2;
@@ -190,7 +190,7 @@ public class StuInfo extends JFrame {
 		girdBag.setConstraints(sBirth, girdBagCon);
 		Panel.add(sBirth);
 
-		jLabel6.setText("Ö°	Îñ£º");
+		jLabel6.setText("èŒ	åŠ¡ï¼š");
 		jLabel6.setFont(new Font("Dialog", 0, 12));
 		gridx = 2;
 		gridy = 2;
@@ -210,7 +210,7 @@ public class StuInfo extends JFrame {
 		girdBag.setConstraints(sDuty, girdBagCon);
 		Panel.add(sDuty);
 
-		jLabel7.setText("¼®	¹á£º");
+		jLabel7.setText("ç±	è´¯ï¼š");
 		jLabel7.setFont(new Font("Dialog", 0, 12));
 		gridx = 0;
 		gridy = 3;
@@ -230,7 +230,7 @@ public class StuInfo extends JFrame {
 		girdBag.setConstraints(sHome, girdBagCon);
 		Panel.add(sHome);
 
-		jLabel8.setText("ËŞÉáºÅ£º");
+		jLabel8.setText("å®¿èˆå·ï¼š");
 		jLabel8.setFont(new Font("Dialog", 0, 12));
 		gridx = 2;
 		gridy = 3;
@@ -250,7 +250,7 @@ public class StuInfo extends JFrame {
 		girdBag.setConstraints(sDormId, girdBagCon);
 		Panel.add(sDormId);
 
-		jLabel9.setText("Éí·İÖ¤ºÅ£º");
+		jLabel9.setText("èº«ä»½è¯å·ï¼š");
 		jLabel9.setFont(new Font("Dialog", 0, 12));
 		gridx = 0;
 		gridy = 4;
@@ -270,7 +270,7 @@ public class StuInfo extends JFrame {
 		girdBag.setConstraints(sCardId, girdBagCon);
 		Panel.add(sCardId);
 
-		jLabel10.setText("µç	»°£º");
+		jLabel10.setText("ç”µ	è¯ï¼š");
 		jLabel10.setFont(new Font("Dialog", 0, 12));
 		gridx = 2;
 		gridy = 4;

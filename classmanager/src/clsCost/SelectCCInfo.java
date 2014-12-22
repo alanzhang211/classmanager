@@ -1,4 +1,4 @@
-package clsCost;
+ï»¿package clsCost;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -22,16 +22,16 @@ import jdbc.CcDb;
 public class SelectCCInfo extends JFrame implements ActionListener {
 	JPanel panel1 = new JPanel();
 	JPanel panel2 = new JPanel();
-	JLabel label1 = new JLabel("°´ĞòºÅ²éÕÒ");
-	JLabel label2 = new JLabel("ÖÁ");
+	JLabel label1 = new JLabel("æŒ‰åºå·æŸ¥æ‰¾");
+	JLabel label2 = new JLabel("è‡³");
 	JTextField tField1 = new JTextField(15);
 	JTextField tField2 = new JTextField(15);
-	JButton button1 = new JButton("È·¶¨");
-	JButton button2 = new JButton("ÍË³ö");
-	JButton button3 = new JButton("°à·ÑÓà¶î");
+	JButton button1 = new JButton("ç¡®å®š");
+	JButton button2 = new JButton("é€€å‡º");
+	JButton button3 = new JButton("ç­è´¹ä½™é¢");
 	String fromValue = null;
 	String toValue = null;
-	String[] Stu = { "ĞòºÅ", "ÏîÄ¿Ãû", "ÈÕÆÚ", "ÊÕÈë", "Ö§³ö", "ºÏ¼Æ" };
+	String[] Stu = { "åºå·", "é¡¹ç›®å", "æ—¥æœŸ", "æ”¶å…¥", "æ”¯å‡º", "åˆè®¡" };
 	String[][] ClsCostInfo = null;
 
 	public SelectCCInfo() {
@@ -50,7 +50,7 @@ public class SelectCCInfo extends JFrame implements ActionListener {
 		panel2.add(button3);
 		add(panel1);
 		add(panel2);
-		setTitle("°à·ÑÊÕÖ§ĞÅÏ¢");
+		setTitle("ç­è´¹æ”¶æ”¯ä¿¡æ¯");
 		setLocation(400, 256);
 		setSize(600, 300);
 		pack();
@@ -68,7 +68,7 @@ public class SelectCCInfo extends JFrame implements ActionListener {
 				ClsCostInfo = rcc.ccAllSearch("cNum", fromValue, toValue);
 				if (ClsCostInfo == null) {
 					this.dispose();
-					JOptionPane.showMessageDialog(null, "Ã»ÓĞ·ûºÏÌõ¼şµÄ¼ÇÂ¼");
+					JOptionPane.showMessageDialog(null, "æ²¡æœ‰ç¬¦åˆæ¡ä»¶çš„è®°å½•");
 				} else {
 					JTable table = new JTable(ClsCostInfo, Stu);
 					table.setPreferredScrollableViewportSize(new Dimension(550,
@@ -84,7 +84,7 @@ public class SelectCCInfo extends JFrame implements ActionListener {
 		} else if (obj == button2) {
 			this.dispose();
 		} else if (obj == button3) {
-			JFrame jFrame = new JFrame("°à·ÑÓà¶î");
+			JFrame jFrame = new JFrame("ç­è´¹ä½™é¢");
 			JTextField jTextField = new JTextField();
 			CcDb cost = new CcDb();
 			String ccbalance = null;
@@ -98,13 +98,13 @@ public class SelectCCInfo extends JFrame implements ActionListener {
 			double i=Double.parseDouble(ccbalance);
 			if (i >=50) {
 				jTextField.setBackground(Color.green);
-				JOptionPane.showMessageDialog(null, "°à·Ñ»¹ÓĞÓà¶î£¡");
+				JOptionPane.showMessageDialog(null, "ç­è´¹è¿˜æœ‰ä½™é¢ï¼");
 			} else if(i<5&&i>=0){
 				jTextField.setBackground(Color.yellow);
-				JOptionPane.showMessageDialog(null, "°à·ÑËùÊ£²»¶à£¡");
+				JOptionPane.showMessageDialog(null, "ç­è´¹æ‰€å‰©ä¸å¤šï¼");
 			}else if(i<0){
 				jTextField.setBackground(Color.red);
-				JOptionPane.showMessageDialog(null, "°à·ÑÒÑÎŞÓà¶î£¡");
+				JOptionPane.showMessageDialog(null, "ç­è´¹å·²æ— ä½™é¢ï¼");
 			}
 			jFrame.setLocation(512, 256);
 			jFrame.setSize(200, 100);

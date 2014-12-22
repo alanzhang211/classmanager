@@ -1,4 +1,4 @@
-package sCheckInfo;
+ï»¿package sCheckInfo;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -36,18 +36,18 @@ public class SCheckInfo extends JFrame {
 	JTextField sAwardScore = new JTextField(15);
 	JTextField sRank = new JTextField(15);
 
-	JButton j1 = new JButton("È·¶¨");
-	JButton j2 = new JButton("Çå¿Õ");
-	JButton j3 = new JButton("ÍË³ö");
+	JButton j1 = new JButton("ç¡®å®š");
+	JButton j2 = new JButton("æ¸…ç©º");
+	JButton j3 = new JButton("é€€å‡º");
 
 	GridBagLayout girdBag = new GridBagLayout();
 	GridBagConstraints girdBagCon;
 
 	public SCheckInfo() {
-		// ÉèÖÃ¿ò¼ÜµÄ´óĞ¡
+		// è®¾ç½®æ¡†æ¶çš„å¤§å°
 		this.setSize(faceSize);
-		// ÉèÖÃ±êÌâ
-		this.setTitle("Ñ§Éú¿¼ÆÀĞÅÏ¢");
+		// è®¾ç½®æ ‡é¢˜
+		this.setTitle("å­¦ç”Ÿè€ƒè¯„ä¿¡æ¯");
 		setLocation(256, 128);
 		this.setResizable(false);
 		this.setVisible(true);
@@ -63,10 +63,10 @@ public class SCheckInfo extends JFrame {
 		contentPane = this.getContentPane();
 		contentPane.setLayout(new BorderLayout());
 
-		// ÖĞ²¿Ãæ°åµÄ²¼¾Ö
+		// ä¸­éƒ¨é¢æ¿çš„å¸ƒå±€
 		Panel.setLayout(girdBag);
 
-		jLabel1.setText("Ñ§	ºÅ£º");
+		jLabel1.setText("å­¦	å·ï¼š");
 		jLabel1.setFont(new Font("Dialog", 0, 12));
 		girdBagCon = new GridBagConstraints();
 		girdBagCon.gridx = 0;
@@ -82,7 +82,7 @@ public class SCheckInfo extends JFrame {
 		girdBag.setConstraints(sNum, girdBagCon);
 		Panel.add(sNum);
 
-		jLabel2.setText("ĞÕ	Ãû£º");
+		jLabel2.setText("å§“	åï¼š");
 		jLabel2.setFont(new Font("Dialog", 0, 12));
 		girdBagCon = new GridBagConstraints();
 		girdBagCon.gridx = 2;
@@ -98,7 +98,7 @@ public class SCheckInfo extends JFrame {
 		girdBag.setConstraints(sName, girdBagCon);
 		Panel.add(sName);
 
-		jLabel3.setText("ĞÔ	±ğ£º");
+		jLabel3.setText("æ€§	åˆ«ï¼š");
 		jLabel3.setFont(new Font("Dialog", 0, 12));
 		girdBagCon = new GridBagConstraints();
 		girdBagCon.gridx = 0;
@@ -114,7 +114,7 @@ public class SCheckInfo extends JFrame {
 		girdBag.setConstraints(sSex, girdBagCon);
 		Panel.add(sSex);
 
-		jLabel4.setText("Æ½Ê±¿¼ÆÀ£º");
+		jLabel4.setText("å¹³æ—¶è€ƒè¯„ï¼š");
 		jLabel4.setFont(new Font("Dialog", 0, 12));
 		girdBagCon = new GridBagConstraints();
 		girdBagCon.gridx = 2;
@@ -130,7 +130,7 @@ public class SCheckInfo extends JFrame {
 		girdBag.setConstraints(sUsualScore, girdBagCon);
 		Panel.add(sUsualScore);
 
-		jLabel5.setText("»ñ½±¼Ó·Ö£º");
+		jLabel5.setText("è·å¥–åŠ åˆ†ï¼š");
 		jLabel5.setFont(new Font("Dialog", 0, 12));
 		girdBagCon = new GridBagConstraints();
 		girdBagCon.gridx = 0;
@@ -146,7 +146,7 @@ public class SCheckInfo extends JFrame {
 		girdBag.setConstraints(sAwardScore, girdBagCon);
 		Panel.add(sAwardScore);
 
-		jLabel6.setText("ÅÅ	Ãû£º");
+		jLabel6.setText("æ’	åï¼š");
 		jLabel6.setFont(new Font("Dialog", 0, 12));
 		girdBagCon = new GridBagConstraints();
 		girdBagCon.gridx = 2;
@@ -162,7 +162,7 @@ public class SCheckInfo extends JFrame {
 		girdBag.setConstraints(sRank, girdBagCon);
 		Panel.add(sRank);
 
-		jLabel7.setText("»ñ½±Ãû³Æ£º");
+		jLabel7.setText("è·å¥–åç§°ï¼š");
 		jLabel7.setFont(new Font("Dialog", 0, 12));
 		girdBagCon = new GridBagConstraints();
 		girdBagCon.gridx = 0;

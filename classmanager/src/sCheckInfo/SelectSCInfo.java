@@ -1,4 +1,4 @@
-package sCheckInfo;
+ï»¿package sCheckInfo;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -20,15 +20,15 @@ import jdbc.ScDb;
 public class SelectSCInfo extends JFrame implements ActionListener {
 	JPanel panel1 = new JPanel();
 	JPanel panel2 = new JPanel();
-	JLabel label1 = new JLabel("°´Ñ§ºÅ²éÕÒ");
-	JLabel label2 = new JLabel("ÖÁ");
+	JLabel label1 = new JLabel("æŒ‰å­¦å·æŸ¥æ‰¾");
+	JLabel label2 = new JLabel("è‡³");
 	JTextField tField1 = new JTextField(10);
 	JTextField tField2 = new JTextField(10);
-	JButton button1 = new JButton("È·¶¨");
-	JButton button2 = new JButton("ÍË³ö");
+	JButton button1 = new JButton("ç¡®å®š");
+	JButton button2 = new JButton("é€€å‡º");
 	String fromValue = null;
 	String toValue = null;
-	String[] Sc = { "Ñ§ºÅ", "ĞÕÃû", "ĞÔ±ğ", "Æ½Ê±¿¼ÆÀ", "»ñ½±Ãû³Æ", "»ñ½±¼Ó·Ö", "ÅÅÃû", "×Ü·Ö" };
+	String[] Sc = { "å­¦å·", "å§“å", "æ€§åˆ«", "å¹³æ—¶è€ƒè¯„", "è·å¥–åç§°", "è·å¥–åŠ åˆ†", "æ’å", "æ€»åˆ†" };
 	String[][] SCheckInfo = null;
 
 	public SelectSCInfo() {
@@ -44,7 +44,7 @@ public class SelectSCInfo extends JFrame implements ActionListener {
 		panel2.add(button2);
 		add(panel1);
 		add(panel2);
-		setTitle("Ñ§Éú¿¼ÆÀĞÅÏ¢");
+		setTitle("å­¦ç”Ÿè€ƒè¯„ä¿¡æ¯");
 		setLocation(400, 256);
 		setSize(600, 300);
 		setVisible(true);
@@ -62,7 +62,7 @@ public class SelectSCInfo extends JFrame implements ActionListener {
 				SCheckInfo = rsc.scAllSearch("sNum", fromValue, toValue);
 				if (SCheckInfo == null) {
 					this.dispose();
-					JOptionPane.showMessageDialog(null, "Ã»ÓĞ·ûºÏÌõ¼şµÄ¼ÇÂ¼");
+					JOptionPane.showMessageDialog(null, "æ²¡æœ‰ç¬¦åˆæ¡ä»¶çš„è®°å½•");
 				} else {
 					JTable table = new JTable(SCheckInfo, Sc);
 					table.setPreferredScrollableViewportSize(new Dimension(550,

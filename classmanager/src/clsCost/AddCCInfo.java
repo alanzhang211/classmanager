@@ -1,4 +1,4 @@
-package clsCost;
+ï»¿package clsCost;
 
 import java.awt.GridBagConstraints;
 import java.awt.event.ActionEvent;
@@ -14,7 +14,7 @@ public class AddCCInfo extends ClsCostInfo implements ActionListener {
 
 	public AddCCInfo() {
 
-		this.setTitle("Ìí¼Ó°à·ÑĞÅÏ¢");
+		this.setTitle("æ·»åŠ ç­è´¹ä¿¡æ¯");
 		j1.addActionListener(this);
 		j2.addActionListener(this);
 		j3.addActionListener(this);
@@ -32,7 +32,7 @@ public class AddCCInfo extends ClsCostInfo implements ActionListener {
 			cName.setText(null);
 			cOut.setText(null);
 			cDate.setText(null);
-		}else if (obj == j3) { // ÍË³ö
+		}else if (obj == j3) { // é€€å‡º
 			this.dispose();
 		}
 	}

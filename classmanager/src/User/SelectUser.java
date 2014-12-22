@@ -1,4 +1,4 @@
-package User;
+ï»¿package User;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -20,17 +20,17 @@ import jdbc.UserDb;
 public class SelectUser extends JFrame implements ActionListener{
 	JPanel panel1 = new JPanel();
 	JPanel panel2 = new JPanel();
-	JLabel label1 = new JLabel("°´ÓÃ»§Ãû²éÕÒ");
+	JLabel label1 = new JLabel("æŒ‰ç”¨æˆ·åæŸ¥æ‰¾");
 	JTextField tField = new JTextField(15);
-	JButton button1 = new JButton("È·¶¨");
-	JButton button2 = new JButton("ÍË³ö");
+	JButton button1 = new JButton("ç¡®å®š");
+	JButton button2 = new JButton("é€€å‡º");
 	String colName=null;
-	String[] Stu = { "ÓÃ»§Ãû", "ÃÜÂë" };
+	String[] Stu = { "ç”¨æˆ·å", "å¯†ç " };
 	String[][] UserInfo = null;
 	
 	public SelectUser(){
 		
-		super("ÓÃ»§ĞÅÏ¢");
+		super("ç”¨æˆ·ä¿¡æ¯");
 		setLayout(new GridLayout(2, 1));
 		button1.addActionListener(this);
 		button2.addActionListener(this);
@@ -56,7 +56,7 @@ public class SelectUser extends JFrame implements ActionListener{
 				UserInfo = user.userAllSearch(colName);
 				if (UserInfo == null) {
 					this.dispose();
-					JOptionPane.showMessageDialog(null, "Ã»ÓĞ·ûºÏÌõ¼şµÄ¼ÇÂ¼");
+					JOptionPane.showMessageDialog(null, "æ²¡æœ‰ç¬¦åˆæ¡ä»¶çš„è®°å½•");
 				} else {
 					JTable table = new JTable(UserInfo, Stu);
 					table.setPreferredScrollableViewportSize(new Dimension(550,

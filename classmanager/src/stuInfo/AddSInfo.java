@@ -1,4 +1,4 @@
-package stuInfo;
+ï»¿package stuInfo;
 
 import java.awt.GridBagConstraints;
 import java.awt.event.ActionEvent;
@@ -13,7 +13,7 @@ import jdbc.StuDb;
 @SuppressWarnings({ "serial", "unused" })
 public class AddSInfo extends StuInfo implements ActionListener {
 	public AddSInfo() {
-		this.setTitle("°à¼¶³ÉÔ±Ìí¼Ó");
+		this.setTitle("ç­çº§æˆå‘˜æ·»åŠ ");
 		j1.addActionListener(this);
 		j2.addActionListener(this);
 		j3.addActionListener(this);
@@ -33,7 +33,7 @@ public class AddSInfo extends StuInfo implements ActionListener {
 			}
 			
 
-		} else if (obj == j2) { // ÍË³ö
+		} else if (obj == j2) { // é€€å‡º
 			this.dispose();
 		} else if (obj == j3) {
 			sNum.setText(null);

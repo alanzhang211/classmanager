@@ -1,4 +1,4 @@
-package jdbc;
+ï»¿package jdbc;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -31,7 +31,7 @@ public class ScDb {
 		sTotal = (Double.parseDouble(sUsualScore) + Double
 				.parseDouble(sAwardScore));
 		if (sNum == null || sNum.equals("")) {
-			JOptionPane.showMessageDialog(null, "ÇëÊäÈëÑ§ÉúÑ§ºÅ", "´íÎó",
+			JOptionPane.showMessageDialog(null, "è¯·è¾“å…¥å­¦ç”Ÿå­¦å·", "é”™è¯¯",
 					JOptionPane.ERROR_MESSAGE);
 			return;
 		} else {
@@ -39,9 +39,9 @@ public class ScDb {
 			java.sql.PreparedStatement ps = null;
 			ResultSet rs = null;
 			try {
-				// ½¨Á¢Á¬½Ó
+				// å»ºç«‹è¿æ¥
 				conn = Database.getConnection();
-				// ´´½¨Óï¾ä
+				// åˆ›å»ºè¯­å¥
 				String sql = "insert into scheckinfo(sNum,sName,sSex,sUsualScore,sAwardName,sAwardScore,sRank,sTotal) values(?,?,?,?,?,?,?,?)";
 				ps = conn.prepareStatement(sql);
 				ps.setString(1, sNum);
@@ -53,11 +53,11 @@ public class ScDb {
 				ps.setString(7, sRank);
 				ps.setDouble(8, sTotal);
 				int i = ps.executeUpdate();
-				JOptionPane.showMessageDialog(null, "³É¹¦Ìí¼Ó" + i + "ÌõĞÂµÄ¼ÍÂ¼£¡");
+				JOptionPane.showMessageDialog(null, "æˆåŠŸæ·»åŠ " + i + "æ¡æ–°çš„çºªå½•ï¼");
 
 			} catch (Exception e) {
 				System.out.println(e);
-				JOptionPane.showMessageDialog(null, "±£´æÊ§°Ü", "´íÎó",
+				JOptionPane.showMessageDialog(null, "ä¿å­˜å¤±è´¥", "é”™è¯¯",
 						JOptionPane.ERROR_MESSAGE);
 			} finally {
 				Database.free(rs, ps, conn);
@@ -76,7 +76,7 @@ public class ScDb {
 		sRank = rank;
 
 		if (sNum == null || sNum.equals("")) {
-			JOptionPane.showMessageDialog(null, "ÇëÊäÈëÑ§ºÅ", "´íÎó",
+			JOptionPane.showMessageDialog(null, "è¯·è¾“å…¥å­¦å·", "é”™è¯¯",
 					JOptionPane.ERROR_MESSAGE);
 			return;
 		} else {
@@ -84,9 +84,9 @@ public class ScDb {
 			java.sql.Statement st = null;
 			ResultSet rs = null;
 			try {
-				// ½¨Á¢Á¬½Ó
+				// å»ºç«‹è¿æ¥
 				conn = Database.getConnection();
-				// ´´½¨Óï¾ä
+				// åˆ›å»ºè¯­å¥
 				st = conn.createStatement();
 				String sql = "update scheckinfo set sName='"
 						+ sName
@@ -107,13 +107,13 @@ public class ScDb {
 								.parseDouble(sUsualScore)) + "' where sNum="
 						+ Integer.parseInt(sNum) + "";
 
-				// Ö´ĞĞÓï¾ä
+				// æ‰§è¡Œè¯­å¥
 				int i = st.executeUpdate(sql);
 
-				JOptionPane.showMessageDialog(null, "³É¹¦ĞŞ¸Ä" + i + "ÌõĞÂµÄ¼ÍÂ¼£¡");
+				JOptionPane.showMessageDialog(null, "æˆåŠŸä¿®æ”¹" + i + "æ¡æ–°çš„çºªå½•ï¼");
 			} catch (Exception e) {
 				System.out.println(e);
-				JOptionPane.showMessageDialog(null, "¸üĞÂÊ§°Ü", "´íÎó",
+				JOptionPane.showMessageDialog(null, "æ›´æ–°å¤±è´¥", "é”™è¯¯",
 						JOptionPane.ERROR_MESSAGE);
 			} finally {
 				Database.free(rs, st, conn);
@@ -132,10 +132,10 @@ public class ScDb {
 			conn = Database.getConnection();
 			st = conn.createStatement();
 			int i = st.executeUpdate(sql);
-			JOptionPane.showMessageDialog(null, "³É¹¦É¾³ı" + i + "ÌõĞÂµÄ¼ÍÂ¼£¡");
+			JOptionPane.showMessageDialog(null, "æˆåŠŸåˆ é™¤" + i + "æ¡æ–°çš„çºªå½•ï¼");
 		} catch (Exception e) {
 			System.out.println(e);
-			JOptionPane.showMessageDialog(null, "É¾³ıÊ§°Ü", "´íÎó",
+			JOptionPane.showMessageDialog(null, "åˆ é™¤å¤±è´¥", "é”™è¯¯",
 					JOptionPane.ERROR_MESSAGE);
 		} finally {
 			Database.free(rs, st, conn);

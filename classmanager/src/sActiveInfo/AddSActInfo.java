@@ -1,4 +1,4 @@
-package sActiveInfo;
+ï»¿package sActiveInfo;
 
 import java.awt.GridBagConstraints;
 import java.awt.event.ActionEvent;
@@ -13,7 +13,7 @@ import jdbc.ActDb;
 @SuppressWarnings({ "serial", "unused" })
 public class AddSActInfo extends ActInfo implements ActionListener {
 	public AddSActInfo() {
-		this.setTitle("Ñ§ÉúÆ½Ê±ĞÅÏ¢Ìí¼Ó");
+		this.setTitle("å­¦ç”Ÿå¹³æ—¶ä¿¡æ¯æ·»åŠ ");
 		j1.addActionListener(this);
 		j2.addActionListener(this);
 		j3.addActionListener(this);
@@ -32,7 +32,7 @@ public class AddSActInfo extends ActInfo implements ActionListener {
 			}
 			
 
-		} else if (obj == j2) { // ÍË³ö
+		} else if (obj == j2) { // é€€å‡º
 			this.dispose();
 		} else if (obj == j3) {
 			sNum.setText(null);

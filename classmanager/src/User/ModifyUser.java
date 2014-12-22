@@ -1,4 +1,4 @@
-package User;
+ï»¿package User;
 
 import java.awt.Container;
 import java.awt.GridLayout;
@@ -14,18 +14,18 @@ import javax.swing.JTextField;
 import jdbc.UserDb;
 
 public class ModifyUser extends JFrame implements ActionListener {
-	JButton j1 = new JButton("È·¶¨");
-	JButton j2 = new JButton("Çå¿Õ");
-	JButton j3 = new JButton("È¡Ïû");
-	JLabel l1 = new JLabel("ÓÃ»§Ãû£º");
-	JLabel l2 = new JLabel("ÃÜÂë£º");
+	JButton j1 = new JButton("ç¡®å®š");
+	JButton j2 = new JButton("æ¸…ç©º");
+	JButton j3 = new JButton("å–æ¶ˆ");
+	JLabel l1 = new JLabel("ç”¨æˆ·åï¼š");
+	JLabel l2 = new JLabel("å¯†ç ï¼š");
 	JTextField name = new JTextField();
 	JTextField passworld = new JTextField();
 	JPanel p1 = new JPanel();
 	JPanel p2 = new JPanel();
 
 	public ModifyUser() {
-		super("ĞŞ¸ÄÓÃ»§");
+		super("ä¿®æ”¹ç”¨æˆ·");
 		Container contentPane = this.getContentPane();
 		contentPane.setLayout(new GridLayout(2, 1));
 		p1.setLayout(new GridLayout(2, 2));
@@ -59,7 +59,7 @@ public class ModifyUser extends JFrame implements ActionListener {
 			name.setText(null);
 			passworld.setText(null);
 			
-		} else if (obj == j3) { // ÍË³ö
+		} else if (obj == j3) { // é€€å‡º
 			this.dispose();
 		}
 
